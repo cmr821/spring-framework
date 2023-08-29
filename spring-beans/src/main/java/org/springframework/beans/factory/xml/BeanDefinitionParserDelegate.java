@@ -72,6 +72,9 @@ import org.springframework.util.xml.DomUtils;
  * Intended for use by both the main parser and any extension
  * {@link BeanDefinitionParser BeanDefinitionParsers} or
  * {@link BeanDefinitionDecorator BeanDefinitionDecorators}.
+ * *用于解析XML bean定义的有状态委托类。*用于主解析器和任何扩展*
+ * {@link BeanDefinitionParser BeanDefinitionParser} or*
+ * {@link BeanDefinitionDecorator BeanDefinitionDecorators}.
  *
  * @author Rob Harrop
  * @author Juergen Hoeller

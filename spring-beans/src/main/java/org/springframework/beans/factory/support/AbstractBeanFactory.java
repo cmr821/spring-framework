@@ -91,6 +91,10 @@ import org.springframework.util.StringValueResolver;
  * Does <i>not</i> assume a listable bean factory: can therefore also be used
  * as base class for bean factory implementations which obtain bean definitions
  * from some backend resource (where bean definition access is an expensive operation).
+ * 抽象基类的f@link org.springframework.beans.factory.BeanFactory实现，
+ * 提供f@link org.springframework.beans.factory.config.ConfigurableBeanFactory）
+ * SPI.是否<i>不</i>假设一个可列出的bean工厂:
+ * 	因此也可以用作从某些后端资源(其中bean定义访问是一个昂贵的操作)获取bean定义的bean工厂实现的基类。
  *
  * <p>This class provides a singleton cache (through its base class
  * {@link org.springframework.beans.factory.support.DefaultSingletonBeanRegistry},
@@ -100,12 +104,22 @@ import org.springframework.util.StringValueResolver;
  * interface, custom destroy methods). Furthermore, it can manage a bean factory
  * hierarchy (delegating to the parent in case of an unknown bean), through implementing
  * the {@link org.springframework.beans.factory.HierarchicalBeanFactory} interface.
+ * <p>这个类提供了一个单例缓存(通过它的基类f@link org.springframework.beans.factory.support)。
+ * DefaultSingletonBeanRegistry}，单例/原型确定，
+ * {@link org.springframework.beans.factory。FactoryBean}处理，别名，子bean定义的bean定义合并，
+ * 以及bean销毁(f@link org.springframework.beans.factory.DisposableBean)接口，自定义销毁方法)。
+ * 此外，它还可以通过实现{@link org.springframework.beans.factory来管理bean工厂层次结构(在未知bean的情况下委托给父bean)。
+ * HierarchicalBeanFactory}接口。
  *
  * <p>The main template methods to be implemented by subclasses are
  * {@link #getBeanDefinition} and {@link #createBean}, retrieving a bean definition
  * for a given bean name and creating a bean instance for a given bean definition,
  * respectively. Default implementations of those operations can be found in
  * {@link DefaultListableBeanFactory} and {@link AbstractAutowireCapableBeanFactory}.
+ * <p>由子类实现的主要模板方法是{@link #getBeanDefinition}和{@link #createBean}，
+ * 分别为给定的bean名称检索bean定义和为给定的bean定义创建bean实例。
+ * 这些操作的默认实现可以在f@link DefaultListableBeanFactory）
+ * 和（@link AbstractAutowireCapableBeanFactory）。
  *
  * @author Rod Johnson
  * @author Juergen Hoeller

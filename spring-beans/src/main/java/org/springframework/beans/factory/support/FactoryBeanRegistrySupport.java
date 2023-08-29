@@ -35,6 +35,8 @@ import org.springframework.lang.Nullable;
  * Support base class for singleton registries which need to handle
  * {@link org.springframework.beans.factory.FactoryBean} instances,
  * integrated with {@link DefaultSingletonBeanRegistry}'s singleton management.
+ * 支持需要处理{@link org.springframework.beans.factory的单例注册表的基类。FactoryBean}实例，
+ * 与{@link DefaultSingletonBeanRegistry)的单例管理集成。
  *
  * <p>Serves as base class for {@link AbstractBeanFactory}.
  *

@@ -27,6 +27,8 @@ import org.springframework.lang.Nullable;
  * Configuration interface to be implemented by most listable bean factories.
  * In addition to {@link ConfigurableBeanFactory}, it provides facilities to
  * analyze and modify bean definitions, and to pre-instantiate singletons.
+ * 配置接口，由大多数可列出的bean工厂实现。
+ * 除了{@link ConfigurableBeanFactory}之外，它还提供了以下功能分析和修改bean定义，并预实例化单例。
  *
  * <p>This subinterface of {@link org.springframework.beans.factory.BeanFactory}
  * is not meant to be used in normal application code: Stick to
@@ -34,7 +36,10 @@ import org.springframework.lang.Nullable;
  * {@link org.springframework.beans.factory.ListableBeanFactory} for typical
  * use cases. This interface is just meant to allow for framework-internal
  * plug'n'play even when needing access to bean factory configuration methods.
- *
+ * <p> f@link org.springframework.beans.factory.BeanFactoryh的子接口不打算在正常的应用程序代码中使用:
+ * 	坚持{@link org.springframework.beans.factory}
+ * 	或者{@link org.springframework.beans.factory.ListableBeanFactory}
+ * 	用于典型用例。这个接口只是为了允许框架内部即插即用，即使在需要访问bean工厂配置方法时也是如此。
  * @author Juergen Hoeller
  * @since 03.11.2003
  * @see org.springframework.context.support.AbstractApplicationContext#getBeanFactory()

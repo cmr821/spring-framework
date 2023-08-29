@@ -29,11 +29,15 @@ import org.springframework.lang.Nullable;
  * by name one by one as requested by clients. BeanFactory implementations that
  * preload all their bean definitions (such as XML-based factories) may implement
  * this interface.
+ * f@link BeanFactory}接口的扩展，由可以枚举所有bean实例的bean工厂实现，而不是按客户端请求逐个按名称进行bean查找。
+ * 预加载所有bean定义(如基于xml的工厂)的BeanFactory实现可以实现这个接口。
  *
  * <p>If this is a {@link HierarchicalBeanFactory}, the return values will <i>not</i>
  * take any BeanFactory hierarchy into account, but will relate only to the beans
  * defined in the current factory. Use the {@link BeanFactoryUtils} helper class
  * to consider beans in ancestor factories too.
+ * <p>如果这是一个f@link HierarchicalBeanFactory)，返回值将<i>不</i>考虑任何BeanFactory层次结构，而只与当前工厂中定义的bean相关。
+ * 使用f@link BeanFactoryUtils)帮助器类也可以考虑祖先工厂中的bean。
  *
  * <p>The methods in this interface will just respect bean definitions of this factory.
  * They will ignore any singleton beans that have been registered by other means like
@@ -44,10 +48,17 @@ import org.springframework.lang.Nullable;
  * does allow transparent access to such special beans as well. However, in typical
  * scenarios, all beans will be defined by external bean definitions anyway, so most
  * applications don't need to worry about this differentiation.
+ * <p>这个接口中的方法将只尊重这个工厂的bean定义，它们将忽略任何通过其他方式注册的单例bean，
+ * 比如{@link org.springframework.beans.factory.config.ConfigurableBeanFactory}{@code registerSingleton}方法，
+ * 除了f@code getBeanNamesForType}和{@code getBeansofType}也会检查这些手动注册的单例。
+ * 当然，BeanFactory的f@code getBean}也允许对这种特殊bean进行透明访问。然而，在典型的场景中，
+ * 所有bean都将由外部bean定义定义，因此大多数应用程序不需要担心这种差异。
  *
  * <p><b>NOTE:</b> With the exception of {@code getBeanDefinitionCount}
  * and {@code containsBeanDefinition}, the methods in this interface
  * are not designed for frequent invocation. Implementations may be slow.
+ * <p><b>注意:</b>除了{@code getBeanDefinitionCount}和{@code containsBeanDefinition}之外，
+ * 该接口中的方法不是为频繁调用而设计的。实现可能很慢。
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
