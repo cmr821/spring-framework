@@ -43,12 +43,17 @@ import org.springframework.util.StringUtils;
  * Default implementation of the {@link BeanDefinitionDocumentReader} interface that
  * reads bean definitions according to the "spring-beans" DTD and XSD format
  * (Spring's default XML bean definition format).
+ * {@link BeanDefinitionDocumentReader}接口的默认实现，该接口根据“Spring-beans”DTD
+ * 和XSD格式(Spring的默认XML bean定义格式)读取bean定义。
  *
  * <p>The structure, elements, and attribute names of the required XML document
  * are hard-coded in this class. (Of course a transform could be run if necessary
  * to produce this format). {@code <beans>} does not need to be the root
  * element of the XML document: this class will parse all bean definition elements
  * in the XML file, regardless of the actual root element.
+ * <p>所需XML文档的结构、元素和属性名在这个类中是硬编码的。
+ * (当然，必要时可以运行转换产生这种格式)。{@code <beans>}
+ * 不需要是根元素:这个类将解析XML文件中的所有bean定义元素，而不管实际的根元素是什么。
  *
  * @author Rod Johnson
  * @author Juergen Hoeller

@@ -25,21 +25,31 @@ import org.springframework.core.io.Resource;
  * Convenience extension of {@link DefaultListableBeanFactory} that reads bean definitions
  * from an XML document. Delegates to {@link XmlBeanDefinitionReader} underneath; effectively
  * equivalent to using an XmlBeanDefinitionReader with a DefaultListableBeanFactory.
+ * 从XML文档读取bean定义的f@link DefaultListableBeanFactory的方便扩展。下面委托给f@link XmlBeanDefinitionReader);
+ * 实际上相当于使用XmlBeanDefinitionReader和DefaultListableBeanFactory。
  *
  * <p>The structure, element and attribute names of the required XML document
  * are hard-coded in this class. (Of course a transform could be run if necessary
  * to produce this format). "beans" doesn't need to be the root element of the XML
  * document: This class will parse all bean definition elements in the XML file.
+ * <p>所需XML文档的结构、元素和属性名在这个类中是硬编码的。(当然，如果有必要，可以运行转换来生成这种格式)。
+ * “beans”不必是XML文档的根元素:该类将解析XML文件中的所有bean定义元素。
  *
  * <p>This class registers each bean definition with the {@link DefaultListableBeanFactory}
  * superclass, and relies on the latter's implementation of the {@link BeanFactory} interface.
  * It supports singletons, prototypes, and references to either of these kinds of bean.
  * See {@code "spring-beans-3.x.xsd"} (or historically, {@code "spring-beans-2.0.dtd"}) for
  * details on options and configuration style.
+ * <p>该类使用{@link DefaultlistableBeanFactory}超类注册每个bean定义，并依赖于后者对f@link BeanFactoryl接口的实现。
+ * 它支持单例、原型以及对这两种bean的引用。
+ * 参见f@code“spring-beans-3.x”。Xsd "}(或者以前是f@code "spring-beans- 2.2 .dtd"})，
+ * 了解有关选项和配置风格的详细信息。
  *
  * <p><b>For advanced needs, consider using a {@link DefaultListableBeanFactory} with
  * an {@link XmlBeanDefinitionReader}.</b> The latter allows for reading from multiple XML
  * resources and is highly configurable in its actual XML parsing behavior.
+ * <p><b>对于高级需求，考虑使用f@link defaultlistablebeanfactoryz和f@link xmlbeandefinitionreaderz。
+ * </b>后者允许从多个XML资源中读取，并且在实际的XML解析行为中具有高度可配置性。
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
